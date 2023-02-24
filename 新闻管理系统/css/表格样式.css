@@ -1,0 +1,50 @@
+.rightArea>table{
+	border-collapse: collapse;
+	width: 100%;
+	margin: 10px auto;
+	border: 1px solid #999;
+}
+.rightArea>table tr th{
+	font-size: 20px;
+	color: white;
+	padding: 5px;
+}
+.rightArea>table tr{
+	border-bottom: 1px dotted #999 ;
+	height: 40px;
+}
+.rightArea>table tr{
+	text-align: center;
+	padding: 4px;
+	font-size: 14px;
+}
+.rightArea>table td:first-of-type{width: 200px;}
+.rightArea>table tr:nth-of-type(even){background-color: lightgoldenrodyellow;}
+.rightArea>table tr:first-of-type{background-color: limegreen;}
+.rightArea>table tr:not(tr:first-of-type):hover{background-color: sandybrown;}
+.rightArea>table .opt-btn{
+	display:inline-block;
+	width: 80px;
+	height: 24px;
+	text-align: center;
+	color: white;
+	line-height: 24px;
+	background-color: darkolivegreen;
+	margin: 5px;
+	border: 4px outset lightgray;
+	border-radius: 5px;
+}
+.rightArea>table .opt-btn:hover{background-color: orange;}
+#page{
+	width: 400px;
+	height: 40px;
+	margin: 10px auto;
+}
+#page>li{
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+	color: white;
+	border-radius: 5px;
+	background-color: darkgrey;
+}
