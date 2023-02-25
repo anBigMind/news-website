@@ -2,9 +2,11 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>管理员后台首页</title>
+		<title>新闻分类管理</title>
 		<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
 		<link rel="stylesheet" href="../css/管理员后台首页.css">
+		<link rel="stylesheet" href="../css/表格样式.css">
+		<link rel="stylesheet" href="../css/添加新闻.css">
 	</head>
 	<body>
 		<header id="top-menu">
@@ -26,35 +28,27 @@
 		<div id="main-content">
 			<div class="leftArea">
 				<ul class="leftMenu">
-					<li class="menuItem"><i class="fa fa-home"></i><a href="#">后台首页</a></li>
+					<li class="menuItem"><i class="fa fa-home"></i><a href="管理员后台首页.html">后台首页</a></li>
 					<li class="menuItem"><i class="fa fa-filter"></i><a href="新闻分类管理.html">新闻分类管理</a></li>
 					<li class="menuItem"><i class="fa fa-file-text"></i><a href="新闻管理.html">新闻管理</a></li>
 					<li class="menuItem"><i class="fa fa-user"></i><a href="用户管理.html">用户管理</a></li>
-					<li class="menuItem"><i class="fa fa-legal"></i><a href="管理员管理.html">管理员管理</a></li>
+					<li class="menuItem"><i class="fa fa-legal"></i><a href="#">管理员管理</a></li>
 				</ul>
 			</div>
 			<div class="rightArea">
-				<h2>欢迎来到新闻系统后台首页</h2>
-				<div class="tjBox">
-					<h3>新闻分类总数</h3>
-					<span>8</span>
-					<span class="s-dw">个</span>
-				</div>
-				<div class="tjBox">
-					<h3>新闻总数</h3>
-					<span>64</span>
-					<span class="s-dw">条</span>
-				</div>
-				<div class="tjBox">
-					<h3>用户总数</h3>
-					<span>256</span>
-					<span class="s-dw">人</span>
-				</div>
-				<div class="tjBox">
-					<h3>管理员总数</h3>
-					<span>16</span>
-					<span class="s-dw">人</span>
-				</div>
+				<p>
+					<a href="管理员后台首页.html">首页</a>/
+					<a href="新闻分类管理.html">新闻分类管理</a>/
+					<span>添加新闻分类</span>
+				</p>
+				<!-- 从这里开始 -->
+				<form id="addNewsArea">
+					<div class="inputNews title">
+						<label>新闻分类名称:</label>
+						<input type="text">
+					</div>
+					<input id="submit" type="submit" value="提交">
+				</form>
 			</div>
 		</div>
 		<footer id="bottomArea">

@@ -18,7 +18,8 @@
 	text-align: right;
 	/* margin-right: 15px; */
 }
-.cdItem>input[type=text]{
+input[type=text]{
+	padding-left: 4px;
 	outline: none;
 	height: 25px;
 }
@@ -33,3 +34,15 @@
 	border-radius: 5px;
 }
 .searchBtn:hover{opacity: 0.8;}
+.addNews{
+	background-color: blueviolet;
+	width: 100px;
+	border-radius: 5px;
+	height: 30px;
+	text-align: center;
+	padding-top: 5px;
+	margin: 9px;
+	float: right;
+	}
+.addNews>a{color: aliceblue;}
+.addNews:hover{opacity: 0.8;}
