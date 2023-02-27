@@ -20,7 +20,7 @@
 }
 .rightArea>table td:first-of-type{width: 200px;}
 .rightArea>table tr:nth-of-type(even){background-color: lightgoldenrodyellow;}
-.rightArea>table tr:first-of-type{background-color: limegreen;}
+.rightArea>table tr:first-of-type{background-color: var(--baseColor);}
 .rightArea>table tr:not(tr:first-of-type):hover{background-color: sandybrown;}
 .rightArea>table .opt-btn{
 	display:inline-block;
