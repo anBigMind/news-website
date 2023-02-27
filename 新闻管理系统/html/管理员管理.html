@@ -6,8 +6,9 @@
 		<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
 		<link rel="stylesheet" href="../css/管理员后台首页.css">
 		<link rel="stylesheet" href="../css/表格样式.css">
-		<link rel="stylesheet" href="../css/搜索栏.css">
 		<link rel="stylesheet" href="../css/global.css">
+		<link rel="stylesheet" href="../css/按钮样式.css">
+		<link rel="stylesheet" href="../css/表单样式.css">
 	</head>
 	<body>
 		<header id="top-menu">
@@ -44,6 +45,19 @@
 				<fieldset>
 					<legend>条件查询</legend>
 					<form method="post" action="#">
+						<div class="cdItem cdRight">
+							<label>管理员权限:</label>
+							<select name="" class="newsTypeSelect">
+								<option value="">请选择</option>
+								<option value="">超级管理员</option>
+								<option value="">普通管理员</option>
+							</select>
+						</div>
+						<div class="cdItem cdRight">
+							<label>注册日期区间:</label>
+							<input type="date"> 到 <input type="date">
+							<input type="submit" class="smallBtn normalBtn" value="搜索"/>
+						</div>
 						<div class="cdItem">
 							<label>管理员名称:</label>
 							<input type="text" name=" " placeholder="请输入管理员名称"/>
@@ -53,23 +67,10 @@
 							<input type="radio" name="gender"> 男
 							<input type="radio" name="gender"> 女
 						</div>
-						<div class="cdItem cdRight cdtop">
-							<label>管理员权限:</label>
-							<select name="" class="newsTypeSelect">
-								<option value="">请选择</option>
-								<option value="">超级管理员</option>
-								<option value="">普通管理员</option>
-							</select>
-						</div>
-						<div class="cdItem cdRight cdbt">
-							<label>注册日期区间:</label>
-							<input type="date"> 到 <input type="date">
-							<input type="submit" class="searchBtn" value="搜索"/>
-						</div>
 					</form>
 				</fieldset>
-				<div class="addNews">
-					<a href="#">添加管理员</a>
+				<div>
+					<a  class="midBtn normalBtn" href="#">添加管理员</a>
 				</div>
 				<table>
 					<tr>
@@ -83,8 +84,8 @@
 						<td>XX</td>
 						<td>普通管理员</td>
 						<td>
-							<a href="#" class="opt-btn">重置密码</a>
-							<a href="#" class="opt-btn">删除</a>
+							<a href="#" class="smallBtn changeBtn">重置密码</a>
+							<a href="#" class="smallBtn delBtn">删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -92,8 +93,8 @@
 						<td>XX</td>
 						<td>普通管理员</td>
 						<td>
-							<a href="#" class="opt-btn">重置密码</a>
-							<a href="#" class="opt-btn">删除</a>
+							<a href="#" class="smallBtn changeBtn">重置密码</a>
+							<a href="#" class="smallBtn delBtn">删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -101,8 +102,8 @@
 						<td>XX</td>
 						<td>普通管理员</td>
 						<td>
-							<a href="#" class="opt-btn">重置密码</a>
-							<a href="#" class="opt-btn">删除</a>
+							<a href="#" class="smallBtn changeBtn">重置密码</a>
+							<a href="#" class="smallBtn delBtn">删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -110,8 +111,8 @@
 						<td>XX</td>
 						<td>普通管理员</td>
 						<td>
-							<a href="#" class="opt-btn">重置密码</a>
-							<a href="#" class="opt-btn">删除</a>
+							<a href="#" class="smallBtn changeBtn">重置密码</a>
+							<a href="#" class="smallBtn delBtn">删除</a>
 						</td>
 					</tr>
 				</table>

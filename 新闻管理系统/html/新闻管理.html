@@ -6,8 +6,9 @@
 		<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
 		<link rel="stylesheet" href="../css/管理员后台首页.css">
 		<link rel="stylesheet" href="../css/表格样式.css">
-		<link rel="stylesheet" href="../css/搜索栏.css">
 		<link rel="stylesheet" href="../css/global.css">
+		<link rel="stylesheet" href="../css/按钮样式.css">
+		<link rel="stylesheet" href="../css/表单样式.css">
 		<!-- <style>
 			.addNews{
 				background-color: blueviolet;
@@ -58,15 +59,7 @@
 				<fieldset>
 					<legend>条件查询</legend>
 					<form method="post" action="#">
-						<div class="cdItem">
-							<label>新闻标题(模糊):</label>
-							<input type="text" name=" " placeholder="请输入新闻标题模糊字"/>
-						</div>
-						<div class="cdItem">
-							<label>作者(模糊):</label>
-							<input type="text" name="" placeholder="请输入作者模糊字">
-						</div>
-						<div class="cdItem cdRight cdtop">
+						<div class="cdItem cdRight">
 							<label>新闻分类:</label>
 							<select name="" class="newsTypeSelect">
 								<option value="">请选择</option>
@@ -79,16 +72,24 @@
 								<option value="">7</option>
 							</select>
 						</div>
-						<div class="cdItem cdRight cdbt">
+						<div class="cdItem cdRight">
 							<label>发布日期区间:</label>
 							<input type="date"> 到 <input type="date">
-							<input type="submit" class="searchBtn" value="搜索"/>
+							<input type="submit" class="smallBtn normalBtn" value="搜索"/>
+						</div>
+						<div class="cdItem">
+							<label>新闻标题(模糊):</label>
+							<input type="text" name=" " placeholder="请输入新闻标题模糊字"/>
+						</div>
+						<div class="cdItem">
+							<label>作者(模糊):</label>
+							<input type="text" name="" placeholder="请输入作者模糊字">
 						</div>
 					</form>
 				</fieldset>
-				<div class="addNews">
-					<a href="添加新闻.html">添加新闻</a>
-				</div>
+				<!-- <div> -->
+					<a  class="midBtn normalBtn" href="添加新闻.html">添加新闻</a>
+				<!-- </div> -->
 				<table>
 					<tr>
 						<th>新闻分类</th>
@@ -103,9 +104,9 @@
 						<td>张某</td>
 						<td>2023-02-21</td>
 						<td>
-							<a href="#" class="opt-btn">查看</a>
-							<a href="新闻修改.html" class="opt-btn">修改</a>
-							<a href="#" class="opt-btn">删除</a>
+							<a href="#" class="smallBtn checkBtn">查看</a>
+							<a href="新闻修改.html" class="smallBtn changeBtn">修改</a>
+							<a href="#" class="smallBtn delBtn">删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -114,9 +115,9 @@
 						<td>张某</td>
 						<td>2023-02-21</td>
 						<td>
-							<a href="#" class="opt-btn">查看</a>
-							<a href="新闻修改.html" class="opt-btn">修改</a>
-							<a href="#" class="opt-btn">删除</a>
+							<a href="#" class="smallBtn checkBtn">查看</a>
+							<a href="新闻修改.html" class="smallBtn changeBtn">修改</a>
+							<a href="#" class="smallBtn delBtn">删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -125,9 +126,9 @@
 						<td>张某</td>
 						<td>2023-02-21</td>
 						<td>
-							<a href="#" class="opt-btn">查看</a>
-							<a href="新闻修改.html" class="opt-btn">修改</a>
-							<a href="#" class="opt-btn">删除</a>
+							<a href="#" class="smallBtn checkBtn">查看</a>
+							<a href="新闻修改.html" class="smallBtn changeBtn">修改</a>
+							<a href="#" class="smallBtn delBtn">删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -136,9 +137,9 @@
 						<td>张某</td>
 						<td>2023-02-21</td>
 						<td>
-							<a href="#" class="opt-btn">查看</a>
-							<a href="新闻修改.html" class="opt-btn">修改</a>
-							<a href="#" class="opt-btn">删除</a>
+							<a href="#" class="smallBtn checkBtn">查看</a>
+							<a href="新闻修改.html" class="smallBtn changeBtn">修改</a>
+							<a href="#" class="smallBtn delBtn">删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -147,9 +148,9 @@
 						<td>张某</td>
 						<td>2023-02-21</td>
 						<td>
-							<a href="#" class="opt-btn">查看</a>
-							<a href="新闻修改.html" class="opt-btn">修改</a>
-							<a href="#" class="opt-btn">删除</a>
+							<a href="#" class="smallBtn checkBtn">查看</a>
+							<a href="新闻修改.html" class="smallBtn changeBtn">修改</a>
+							<a href="#" class="smallBtn delBtn">删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -158,9 +159,9 @@
 						<td>张某</td>
 						<td>2023-02-21</td>
 						<td>
-							<a href="#" class="opt-btn">查看</a>
-							<a href="新闻修改.html" class="opt-btn">修改</a>
-							<a href="#" class="opt-btn">删除</a>
+							<a href="#" class="smallBtn checkBtn">查看</a>
+							<a href="新闻修改.html" class="smallBtn changeBtn">修改</a>
+							<a href="#" class="smallBtn delBtn">删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -169,9 +170,9 @@
 						<td>张某</td>
 						<td>2023-02-21</td>
 						<td>
-							<a href="#" class="opt-btn">查看</a>
-							<a href="新闻修改.html" class="opt-btn">修改</a>
-							<a href="#" class="opt-btn">删除</a>
+							<a href="#" class="smallBtn checkBtn">查看</a>
+							<a href="新闻修改.html" class="smallBtn changeBtn">修改</a>
+							<a href="#" class="smallBtn delBtn">删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -180,9 +181,9 @@
 						<td>张某</td>
 						<td>2023-02-21</td>
 						<td>
-							<a href="#" class="opt-btn">查看</a>
-							<a href="新闻修改.html" class="opt-btn">修改</a>
-							<a href="#" class="opt-btn">删除</a>
+							<a href="#" class="smallBtn checkBtn">查看</a>
+							<a href="新闻修改.html" class="smallBtn changeBtn">修改</a>
+							<a href="#" class="smallBtn delBtn">删除</a>
 						</td>
 					</tr>
 				</table>
