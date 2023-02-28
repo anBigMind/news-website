@@ -1,0 +1,392 @@
+/* 新闻系统后台样式
+ 全局设置与设计
+ 通用设置
+	按钮
+	表单
+	表格
+	翻页控件
+后台登录页
+后台首页
+	顶部区域
+	主区域
+	底部区域
+ */
+
+/*============================ 全局设置与设计 ==========================*/
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+li{list-style: none;}
+.clearfix::after{content: '';clear: both;display: table;}
+:root{/* 全局颜色 */
+	--majorColor:#56a7ff;
+	--baseTextColor:#666;
+	--minorColor:whitesmoke;
+}
+
+/*============================== 通用设置 ==========================*/
+/*------------------ 按钮样式 ------------------*/
+.bigBtn{
+	padding: 20px 50px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	/* background-color: aliceblue; */
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+}
+.midBtn{
+	padding: 15px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	/* background-color: aliceblue; */
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+}
+.smallBtn{
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	/* background-color: aliceblue; */
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+}
+.normalBtn{
+	background-color: var(--majorColor);
+	color: white;
+}
+.changeBtn{
+	background-color: seagreen;
+	color: white;
+}
+.delBtn{
+	background-color: firebrick;
+	color: white;
+}
+.checkBtn{
+	background-color: coral;
+	color: white;
+}
+.bigBtn:hover{opacity: 0.7;}
+.midBtn:hover{opacity: 0.7;}
+.smallBtn:hover{opacity: 0.7;}
+.bigBtn:active{opacity: 1;}
+.midBtn:active{opacity: 1;}
+.smallBtn:active{opacity: 1;}
+
+/*------------------ 表单样式 ------------------*/
+.cdItem{
+	width: 50%;
+	height: 30px;
+	padding: 0 14px;
+	margin: 12px 0;
+}
+label{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	width: 160px;
+	text-align: right;
+	margin-right: 8px;
+}
+input[type=text]{
+	height: 30px;
+	width: 200px;
+	font-size: 16px;
+	outline: none;
+	padding-left: 10px;
+}
+input[type=date]{
+	height: 30px;
+	width: 120px;
+	font-size: 16px;
+	margin: 0px 6px;
+}
+select{
+	height: 30px;
+	width: 120px;
+	font-size: 16px;
+	text-align: center;
+	outline: none;
+}
+.cdRight{
+	float: right;
+}
+.newsContent textarea{
+	resize: none;
+	width: 100%;
+	outline: none;
+	margin: 20px auto;
+}
+
+/*------------------ 表格样式 ------------------*/
+.rightArea>table{
+	border-collapse: collapse;
+	width: 100%;
+	margin: 10px auto;
+	border: 1px solid #999;
+}
+.rightArea>table tr th{
+	font-size: 20px;
+	color: white;
+	padding: 5px;
+}
+.rightArea>table tr{
+	border-bottom: 1px dotted #999 ;
+	height: 40px;
+}
+.rightArea>table tr{
+	text-align: center;
+	padding: 4px;
+	font-size: 14px;
+}
+.rightArea>table td:first-of-type{width: 200px;}
+.rightArea>table tr:nth-of-type(even){background-color: mintcream;}
+.rightArea>table tr:first-of-type{background-color: var(--majorColor);}
+.rightArea>table tr:not(tr:first-of-type):hover{background-color: ghostwhite;}
+/* .rightArea>table .opt-btn{
+	display:inline-block;
+	width: 80px;
+	height: 24px;
+	text-align: center;
+	color: white;
+	line-height: 24px;
+	background-color: darkolivegreen;
+	margin: 5px;
+	border: 4px outset lightgray;
+	border-radius: 5px;
+} */
+/* .rightArea>table .opt-btn:hover{background-color: orange;} */
+/*----------------- 翻页控件 -----------------*/
+#page{
+	width: 400px;
+	height: 40px;
+	margin: 10px auto;
+}
+#page>li{
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+	border-radius: 5px;
+	background-color: var(--majorColor);
+	color: white;
+}
+#page li>a{
+	text-decoration: none;
+	color: white;
+}
+
+/*============================ 后台登录页 =========================*/
+#login{
+	width: 410px;
+	height: 410px;
+	margin: auto;
+	margin-top: 140px;
+	border-radius: 20px;
+	background-color: white;
+	box-shadow: aliceblue 0 0 15px,white 0 0 30px;
+}
+#login h1{
+	text-align: center;
+	background-color: var(--majorColor);
+	color: white;
+	border-radius: 20px 20px 0px 0px;
+	height 120px;
+	line-height: 120px;
+}
+#loginForm .wrongTip{
+	text-align: center;
+	color: red;
+	visibility: hidden;
+	padding: 10px 0px;
+}
+#loginForm .input{
+	width: 200px;
+	display: inline-block;
+	height: 42px;
+	margin: 20px 0px;
+	border: gray;
+}
+#loginForm .input input{
+	height: 40px;
+	width: 100%;
+	/* background-color: gray; */
+	border-radius: 21px ;
+	outline: none;
+	padding-left: 10px;
+}
+/* .login-btm{
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #56A7FF;
+	color: white;
+	border: none;
+	margin:10px auto;
+	display: block;
+	border-radius: 6px;
+}
+.login-btm:hover{
+	cursor: wait;
+	background-color: blue;
+} */
+.bottomArea{
+	text-align: center;
+	color: azure;
+	font-size: 14px;
+	margin-top: 80px;
+}
+.loginIcon label{
+	width: 90px;
+}
+.fa{
+	/* margin-left: -20px; */
+}
+.loginBtn{
+	text-align: center;
+}
+
+/*=========================== 后台首页 ============================*/
+/*------------------ 顶部区域 ------------------*/
+#userImg{
+	height: 40px;
+	border-radius: 20px;
+	
+}
+.drop-menu>a{
+	line-height: 40px;
+	height: 40px;
+}
+#logo{margin-top: 5px;}
+#top-menu{
+	height: 60px;
+	min-width: 1599px;
+	background-color: var(--majorColor);
+	/* padding: 0px 50px; */
+}
+#top-menu>ul{
+	float: right;
+	padding-right: 100px;
+	}
+#top-menu>ul>li{
+	float: left;
+	line-height: 50px;
+	padding-top: 5px;
+}
+#top-menu>ul>li a{
+	color: white;
+}
+#top-menu .drop-menu{
+	position: relative;
+	height: 50px
+}
+#top-menu .drop-content{
+	position: absolute;
+	width: 100px;
+	background-color: gray;
+	border-radius: 6px;
+	text-align: center;
+	display: none;
+}
+#top-menu .drop-menu:hover .drop-content{display: block;}
+#top-menu .drop-menu .drop-content ul:hover a{font-weight: bold;}
+/*------------------ 主区域 ------------------*/
+#main-content{
+	width: 100%;
+	min-width: 1599px;
+	margin: 0px auto;
+	/* height: 90vh; */
+	display: block;
+	overflow: hidden;
+	/* border: 1px solid black; */
+}
+#main-content .leftArea{
+	/* border: 1px solid black; */
+	/* display: inline; */
+	width: 200px;
+	min-width: 200px;
+	float: left;
+	background-color: var(--minorColor);
+	text-align: center;
+	height: 90vh;
+}
+#main-content .rightArea{
+	/* display: inline; */
+	width: 80%;
+	/* min-width: 820px; */
+	/* height: 560px; */
+	margin: 40px;
+	float: right;
+}
+#main-content .rightArea>h2{text-align: center;}
+#main-content .leftMenu .menuItem>a{
+	color: black;
+	line-height: 60px;
+	font-size: 16px;
+	/* border: 1px solid black; */
+}
+.leftMenu li{border-top: 1px solid #999;}
+.leftMenu li:last-of-type{border-bottom: 1px solid #999;}
+.menuItem:hover a{font-weight: bold;}
+#main-content .rightArea h2{
+	font-size: 24px;
+	color: black;
+}
+.rightArea .tjBox{
+	width: 220px;
+	height: 120px;
+	margin: 40px 20px;
+	display: inline-block;
+	background-color: lightsalmon;
+	border-radius: 30px;
+	box-shadow: 1px 10px 20px #999;
+}
+.rightArea .tjBox:hover{
+	width: 230px;
+	height: 130px;
+	margin: 40px 15px;
+	box-shadow: 10px 20px 40px #999;
+}
+.rightArea .tjBox h3{
+	text-align: center;
+	margin-top: 16px;
+	color: white;
+}
+.rightArea .tjBox span{
+	display: block;
+	text-align: center;
+	line-height: 80px;
+	font-size: 34px;
+	color: white;
+}
+.rightArea .tjBox .s-dw{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	color: white;
+	position: relative;
+	bottom: 80px;
+	left: 160px;
+	font-size: 24px;
+}
+.bread{
+	font-size: 18px;
+}
+/*------------------ 底部区域 ------------------*/
+#bottomArea{
+	background-color: var(--majorColor);
+	color: white;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+}
