@@ -297,6 +297,44 @@ body{background-color: #F2F2F2;}
 #listBar li:first-of-type>a{
 	color: #00C582;
 }
+.leftArrow{
+	position: absolute;
+	left: -60px;
+	height: 100px;
+	line-height: 100px;
+	top: 350px;
+	font-size: 60px;
+	width: 60px;
+	background-color: #F2F2F2;
+	color: #3A3A3A;
+	transition-duration: 0.4s;
+}
+.rightArrow{
+	position: absolute;
+	right: -60px;
+	top: 350px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 60px;
+	width: 60px;
+	background-color: #F2F2F2;
+	color: #3A3A3A;
+	transition-duration: 0.4s;
+}
+.leftArrow:hover{
+	cursor: pointer;
+	background-color: #EEEEEE;
+}
+.rightArrow:hover{
+	cursor: pointer;
+	background-color: #EEEEEE;
+}
+#songList:hover .leftArrow{
+	transform: translate(60px,0);
+}
+#songList:hover .rightArrow{
+	transform: translate(-60px,0);
+}
 #playList{
 	position: relative;
 	height: 400px;
@@ -320,7 +358,6 @@ body{background-color: #F2F2F2;}
 	width: 224px;
 	height: 224px;
 	overflow: hidden;
-	z-index: 4;
 }
 .mask:hover img{
 	transform: scale(1.1);
@@ -414,7 +451,7 @@ body{background-color: #F2F2F2;}
 	text-align: center;
 	overflow: hidden;
 	width: 100%;
-	height: 800px;
+	height: 620px;
 	background-image: linear-gradient(#F2F2F2,#F3F3F3,#F5F5F5,#F8F8F8,#FDFDFD,#FAFAFA);
 }
 #newSong h1{
@@ -441,5 +478,291 @@ body{background-color: #F2F2F2;}
 }
 #newSong>span:hover{
 	background-color: #EDEDED;
+	cursor: pointer;
+}
+#newSongList{
+	margin: 0px auto;
+}
+#newSongList>table{
+	margin: 0px auto;
+	margin-top: 20px;
+}
+#newSongList>table td{
+	display: inline-block;
+	margin: 0px 40px;
+	margin-top: 10px;
+}
+#newSongList>table tr:nth-child(1)>td{
+	border-bottom: 1px solid #DADADA;
+}
+#newSongList>table tr:nth-child(2)>td{
+	border-bottom: 1px solid #DADADA;
+}
+#newSongList>table a:first-of-type{
+	position: relative;
+	color: black;
+	float: right;
+	top: 25px;
+	left: -60px;
+}
+#newSongList>table a:last-of-type{
+	position: relative;
+	color: #999999;
+	top: -20px;
+	font-size: 15px;
+	left:5px;
+}
+#newSongList>table a:hover{
+	color: #00C582;
+}
+.time{
+	position: relative;
+	bottom: 50px;
+	color: #999999;
+	font-size: 15px;
+	left: 150px;
+}
+._leftArrow{
+	position: absolute;
+	left: -60px;
+	height: 100px;
+	line-height: 100px;
+	top: 930px;
+	font-size: 60px;
+	width: 60px;
+	background-color: #F2F2F2;
+	color: #3A3A3A;
+	transition-duration: 0.4s;
+}
+._rightArrow{
+	position: absolute;
+	right: -60px;
+	top: 930px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 60px;
+	width: 60px;
+	background-color: #F2F2F2;
+	color: #3A3A3A;
+	transition-duration: 0.4s;
+}
+._leftArrow:hover{
+	cursor: pointer;
+	background-color: #EEEEEE;
+}
+._rightArrow:hover{
+	cursor: pointer;
+	background-color: #EEEEEE;
+}
+#newSong:hover ._leftArrow{
+	transform: translate(60px,0);
+}
+#newSong:hover ._rightArrow{
+	transform: translate(-60px,0);
+}
+._changePage{
+	position: absolute;
+	left: 720px;
+	top: 1240px;
+	width: 150px;
+	height: 10px;
+}
+._changePage li{
+	height: 8px;
+	width: 8px;
+	border-radius: 8px;
+	float: left;
+	margin: 0 10px;
+	background-color: #E0E0E0;
+}
+._changePage li:first-of-type{
+	background-color: #AEAEAE;
+}
+._changePage li:hover{
+	background-color: #AEAEAE;
+	cursor: pointer;
+}
+._playBtn{
+	display: inline-block;
+	position: relative;
+	width: 0px;
+	height: 0px;
+	bottom: 30px;
+	right: 60px;
+}
+._playBtn img{
+	width: 25px;
+	height: 25px;
+	opacity: 0;
+	transition-duration: 0.4s;
+}
+#newSongList>table td img:hover{
+	cursor: pointer;
+}
+#newSongList>table img:hover~._playBtn img{
+	opacity: 1;
+	transform: scale(1.5);
+	filter: brightness(100%);
+}
+._playBtn img:hover{
+	cursor: pointer;
+	opacity: 1;
+	transform: scale(1.5);
+	filter: brightness(100%);
+}
+#recommend{
+	text-align: center;
+	overflow: hidden;
+	width: 100%;
+	height: 420px;
+	background-image: linear-gradient(#F2F2F2,#F3F3F3,#F5F5F5,#F8F8F8,#FDFDFD,#FAFAFA);
+}
+#recommend h1{
+	margin: 30px auto;
+	font-weight: normal;
+}
+#recommend div:nth-of-type(1){
+	position: relative;
+	float: right;
+	right: 200px;
+}
+#recommend div:nth-of-type(2){
+	position: relative;
+	float: left;
+	left: 200px;
+}
+._1changePage{
+	position: absolute;
+	left: 720px;
+	top: 1680px;
+	width: 150px;
+	height: 10px;
+}
+._1changePage li{
+	height: 8px;
+	width: 8px;
+	border-radius: 8px;
+	float: left;
+	margin: 0 10px;
+	background-color: #E0E0E0;
+}
+._1changePage li:first-of-type{
+	background-color: #AEAEAE;
+}
+._1changePage li:hover{
+	background-color: #AEAEAE;
+	cursor: pointer;
+}
+._1leftArrow{
+	position: absolute;
+	left: -60px;
+	height: 100px;
+	line-height: 100px;
+	top: 1430px;
+	font-size: 60px;
+	width: 60px;
+	background-color: #F2F2F2;
+	color: #3A3A3A;
+	transition-duration: 0.4s;
+}
+._1rightArrow{
+	position: absolute;
+	right: -60px;
+	top: 1430px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 60px;
+	width: 60px;
+	background-color: #F2F2F2;
+	color: #3A3A3A;
+	transition-duration: 0.4s;
+}
+._1leftArrow:hover{
+	cursor: pointer;
+	background-color: #EEEEEE;
+}
+._1rightArrow:hover{
+	cursor: pointer;
+	background-color: #EEEEEE;
+}
+#recommend:hover ._1leftArrow{
+	transform: translate(60px,0);
+}
+#recommend:hover ._1rightArrow{
+	transform: translate(-60px,0);
+}
+#rank{
+	text-align: center;
+	overflow: hidden;
+	width: 100%;
+	height: 650px;
+	background-image: linear-gradient(#F2F2F2,#F3F3F3,#F5F5F5,#F8F8F8,#FDFDFD,#FAFAFA);
+}
+#rank>h1{
+	margin: 30px auto;
+	font-weight: normal;
+}
+#rank>a{
+	position: relative;
+	float: right;
+	right: 200px;
+	bottom: 60px;
+	color: black;
+}
+#rank>a:hover{
+	color: #00C582;
+}
+#rank>div{
+	margin: 10px auto;
+}
+#rank ul{
+	position: relative;
+	left: 200px;
+}
+#rank li{
+	float: left;
+	background-color: #308F93;
+	height: 500px;
+	width: 220px;
+	margin: 0 10px;
+}
+#rank p{
+	position: relative;
+	top: 40px;
+	font-size: 22px;
+	font-weight: lighter;
+	color: white;
+}
+#rank div h1{
+	position: relative;
+	font-weight: normal;
+	color: white;
+	top: 40px;
+}
+#rank>div div{
+	position: relative;
+	top: 80px;
+	left: 90px;
+	border-radius: 3px;
+	height: 3px;
+	width: 40px;
+	background-color: white;
+}
+#rank>div div img{
+	position: relative;
+	bottom: 14px;
+	left: 5px;
+	height: 30px;
+	width: 30px;
+	opacity: 0;
+	transition-duration: 0.3s;
+}
+#rank li:hover div{
+	background-color: transparent;
+}
+#rank li:hover img{
+	display: block;
+	transform: scale(1.6);
+	opacity: 1;
 	cursor: pointer;
 }
