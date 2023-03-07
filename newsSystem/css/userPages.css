@@ -1,0 +1,143 @@
+/*============================ 全局设置与设计 ==========================*/
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+li{list-style: none;}
+.clearfix::after{content: '';clear: both;display: table;}
+:root{/* 全局颜色 */
+	--majorColor:#56a7ff;
+	--baseTextColor:#666;
+	--minorColor:whitesmoke;
+}
+/*------------------ 顶部区域 ------------------*/
+.userImg{
+	height: 40px;
+	border-radius: 20px;
+	vertical-align: middle;
+}
+.userImg:hover{
+	cursor: pointer;
+}
+.drop-menu>a{
+	line-height: 40px;
+	height: 40px;
+}
+#logo{margin-top: 5px;}
+#top-menu{
+	height: 60px;
+	min-width: 1599px;
+	background-color: var(--majorColor);
+}
+#top-menu>ul{
+	float: right;
+	padding-right: 100px;
+	}
+#top-menu>ul>li{
+	float: left;
+	line-height: 50px;
+	padding-top: 5px;
+}
+#top-menu>ul>li a{
+	margin: 0 10px;
+	color: white;
+}
+#top-menu>ul>a{
+	color: white;
+	line-height: 60px;
+	margin-left: 20px;
+}
+#top-menu .drop-menu{
+	position: relative;
+	height: 50px
+}
+#top-menu .drop-content{
+	position: absolute;
+	width: 100px;
+	background-color: gray;
+	border-radius: 6px;
+	text-align: center;
+	display: none;
+}
+#top-menu>ul>a:hover{font-weight: bold;}
+#top-menu .drop-menu:hover .drop-content{display: block;}
+#top-menu .drop-menu .drop-content>ul:hover a{font-weight: bold;}
+nav{
+	background-color: var(--minorColor);
+	border-bottom: 1px solid #ededed;
+}
+nav li{
+	float: left;
+	padding: 10px 20px;
+	font-size: 18px;
+}
+nav li:hover{
+	cursor: pointer;
+	background-color: var(--majorColor);
+}
+/* --------------------左边区域---------------------- */
+#leftArea{
+	display: inline-block;
+	width: 25%;
+}
+#leftArea>div{
+	width: 75%;
+	height: 300px;
+	margin: 20px auto;
+	border: 1px solid black;
+	text-align: center;
+}
+#leftArea>div h3{
+	border-bottom: 1px solid black;
+	padding: 10px;
+}
+/* -------------------中间区域--------------------- */
+#centerArea{
+	position: absolute;
+	display: inline-block;
+	width: 50%;
+}
+.news{
+	width: 80%;
+	height: 100px;
+	margin: 20px auto;
+	background-color: var(--minorColor);
+}
+#pageCtrl{
+	width: 100%;
+}
+#pageCtrl>ul{
+	text-align: center;
+}
+#pageCtrl>ul>li{
+	display: inline-block;
+	padding: 10px;
+}
+#newsContent{
+	width: 80%;
+	text-align: center;
+}
+#newsContent>span:nth-of-type(1){
+	float: left;
+}
+#newsContent>span:nth-of-type(2){
+	float: right;
+}
+.article{
+	width: 80%;
+	text-align: justify;
+}
+#newsContent article{
+	width: 100%;
+	margin: 50px;
+}
+/* ---------------------右边区域--------------------- */
+#rightArea{
+	display: inline-block;
+	float: right;
+	width: 25%;
+}
+#rightArea>div{
+	border: 1px solid black;
+	width: 80%;
+	height: 180px;
+	margin: 20px auto;
+}
