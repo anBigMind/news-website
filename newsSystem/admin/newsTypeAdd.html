@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>新闻分类管理</title>
+		<title>添加新闻分类</title>
 		<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
 		<link rel="stylesheet" href="../css/newsSys.css">
 	</head>
@@ -27,26 +27,27 @@
 		<div id="main-content">
 			<div class="leftArea">
 				<ul class="leftMenu">
-					<li class="menuItem"><i class="fa fa-home"></i><a href="管理员后台首页.html">后台首页</a></li>
+					<li class="menuItem"><i class="fa fa-home"></i><a href="mainPage.html">后台首页</a></li>
 					<li class="menuItem"><i class="fa fa-filter"></i><a href="newsTypeMgmt.html">新闻分类管理</a></li>
-					<li class="menuItem"><i class="fa fa-file-text"></i><a href="新闻管理.html">新闻管理</a></li>
-					<li class="menuItem"><i class="fa fa-user"></i><a href="用户管理.html">用户管理</a></li>
-					<li class="menuItem"><i class="fa fa-legal"></i><a href="#">管理员管理</a></li>
+					<li class="menuItem"><i class="fa fa-file-text"></i><a href="newsMgmt.html">新闻管理</a></li>
+					<li class="menuItem"><i class="fa fa-user"></i><a href="userMgmt.html">用户管理</a></li>
+					<li class="menuItem"><i class="fa fa-legal"></i><a href="adminMgmt.html">管理员管理</a></li>
 				</ul>
 			</div>
 			<div class="rightArea">
 				<p>
-					<a href="管理员后台首页.html">首页</a> / 
-					<a href="新闻分类管理.html">新闻分类管理</a> / 
+					<a href="mainPage.html">首页</a> / 
+					<a href="newsTypeMgmt.html">新闻分类管理</a> / 
 					<span class="bread">添加新闻分类</span>
 				</p>
 				<!-- 从这里开始 -->
-				<form id="addNewsArea">
-					<div class="inputNews title">
+				<form id="addNewsArea" method='get' action='#'>
+					<div class="inputNews">
 						<label>新闻分类名称:</label>
 						<input type="text">
+						<button type="submit" class="midBtn changeBtn"><i class="fa fa-plus-circle"></i> 添加</button>
+						<button type="button" class="midBtn normalBtn" onclick="history.back()"><i class="fa fa-backward"></i> 返回</button>
 					</div>
-					<input class="midBtn changeBtn" type="submit" value="提交">
 				</form>
 			</div>
 		</div>

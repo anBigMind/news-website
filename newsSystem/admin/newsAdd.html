@@ -27,38 +27,48 @@
 		<div id="main-content">
 			<div class="leftArea">
 				<ul class="leftMenu">
-					<li class="menuItem"><i class="fa fa-home"></i><a href="管理员后台首页.html">后台首页</a></li>
+					<li class="menuItem"><i class="fa fa-home"></i><a href="mainPage.html">后台首页</a></li>
 					<li class="menuItem"><i class="fa fa-filter"></i><a href="newsTypeMgmt.html">新闻分类管理</a></li>
-					<li class="menuItem"><i class="fa fa-file-text"></i><a href="新闻管理.html">新闻管理</a></li>
-					<li class="menuItem"><i class="fa fa-user"></i><a href="用户管理.html">用户管理</a></li>
-					<li class="menuItem"><i class="fa fa-legal"></i><a href="#">管理员管理</a></li>
+					<li class="menuItem"><i class="fa fa-file-text"></i><a href="newsMgmt.html">新闻管理</a></li>
+					<li class="menuItem"><i class="fa fa-user"></i><a href="userMgmt.html">用户管理</a></li>
+					<li class="menuItem"><i class="fa fa-legal"></i><a href="adminMgmt.html">管理员管理</a></li>
 				</ul>
 			</div>
 			<div class="rightArea">
 				<p>
-					<a href="管理员后台首页.html">首页</a> / 
-					<a href="新闻管理.html">新闻管理</a> / 
-					<span class="bread">修改新闻</span>
+					<a href="mainPage.html">首页</a> / 
+					<a href="newsMgmt.html">新闻管理</a> / 
+					<span class="bread">添加新闻</span>
 				</p>
 				<!-- 从这里开始 -->
 				<form id="addNewsArea">
 					<div class="inputNews title">
 						<label>新闻标题:</label>
-						<input type="text" placeholder="请输入标题">
+						<input type="text">
 					</div>
 					<div class="inputNews author">
 						<label>作者:</label>
-						<input type="text" placeholder="请输入作者">
+						<input type="text">
 					</div>
-					<div class="newsContent">
-						<span>新闻内容:</span>
-						<textarea name="" id="" cols="30" rows="10" placeholder="请输入内容"></textarea>
+					<div>
+						<label for="">选择分类</label>
+						<select name="">
+							<option value="XX">XX</option>
+							<option value="XX">XX</option>
+							<option value="XX">XX</option>
+							<option value="XX">XX</option>
+						</select>
 					</div>
 					<div class="addImg">
 						<label>添加图片</label>
 						<input type="file">
 					</div>
-					<input class="bigBtn changeBtn" type="submit" value="提交">
+					<div class="newsContent">
+						<span>新闻内容:</span>
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+					</div>
+					<button type="submit" class="midBtn changeBtn"><i class="fa fa-plus-circle"></i> 添加</button>
+					<button type="button" class="midBtn normalBtn" onclick="history.back()"><i class="fa fa-backward"></i> 返回</button>
 				</form>
 			</div>
 		</div>

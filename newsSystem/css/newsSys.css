@@ -105,6 +105,13 @@ input[type=text]{
 	outline: none;
 	padding-left: 10px;
 }
+input[type=password]{
+	height: 30px;
+	width: 200px;
+	font-size: 16px;
+	outline: none;
+	padding-left: 10px;
+}
 input[type=date]{
 	height: 30px;
 	width: 120px;
@@ -129,11 +136,25 @@ select{
 	width: 100%;
 	outline: none;
 	margin: 20px auto;
+	vertical-align: top;
+	font-size: 16px;
 }
 .danxuan{
 	width: 30px;
 	margin: 0 5px;
 	text-align: left;
+}
+.inputNews{
+	margin: 40px 0;
+	width: 650px;
+}
+.inputNews>input{
+	position: relative;
+	top: 5px;
+	vertical-align: bottom;
+}
+.addImg{
+	margin: 20px 0;
 }
 /*------------------ 表格样式 ------------------*/
 .rightArea>table{
