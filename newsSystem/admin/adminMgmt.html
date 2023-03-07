@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>新闻分类管理</title>
+		<title>管理员管理</title>
 		<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
 		<link rel="stylesheet" href="../css/newsSys.css">
 	</head>
@@ -11,13 +11,14 @@
 			<img id="logo" src="../img/logo.png" alt="" width="450" height="50">
 			<ul>
 				<li class="drop-menu">
+					<img id="userImg" src="../img/userImg.jpg" alt="">
 					<a href="#">超管</a>
 					<div class="drop-content">
 						<ul>
 							<a href="#">个人中心</a>
 						</ul>
 						<ul>
-							<a href="管理员后台登陆页.html">退出</a>
+							<a href="login.html">退出</a>
 						</ul>
 					</div>
 				</li>
@@ -27,7 +28,7 @@
 			<div class="leftArea">
 				<ul class="leftMenu">
 					<li class="menuItem"><i class="fa fa-home"></i><a href="管理员后台首页.html">后台首页</a></li>
-					<li class="menuItem"><i class="fa fa-filter"></i><a href="新闻分类管理.html">新闻分类管理</a></li>
+					<li class="menuItem"><i class="fa fa-filter"></i><a href="newsTypeMgmt.html">新闻分类管理</a></li>
 					<li class="menuItem"><i class="fa fa-file-text"></i><a href="新闻管理.html">新闻管理</a></li>
 					<li class="menuItem"><i class="fa fa-user"></i><a href="用户管理.html">用户管理</a></li>
 					<li class="menuItem"><i class="fa fa-legal"></i><a href="#">管理员管理</a></li>
@@ -52,21 +53,21 @@
 						<div class="cdItem cdRight">
 							<label>注册日期区间:</label>
 							<input type="date"> 到 <input type="date">
-							<input type="submit" class="smallBtn normalBtn" value="搜索"/>
+							<button type="submit" class="smallBtn normalBtn"><i class="fa fa-search"></i>搜索</button>
 						</div>
 						<div class="cdItem">
-							<label>管理员名称:</label>
-							<input type="text" name=" " placeholder="请输入管理员名称"/>
+							<label>管理员姓名（模糊）:</label>
+							<input type="text" name=" " placeholder="请输入管理员姓名模糊字"/>
 						</div>
 						<div class="cdItem">
 							<label>性别:</label>
-							<input type="radio" name="gender"> 男
-							<input type="radio" name="gender"> 女
+							<input id="male" type="radio" name="gender" checked/><label class="danxuan" for="male">男</label>
+							<input id="female" type="radio" name="gender"/><label class="danxuan" for="female">女</label>
 						</div>
 					</form>
 				</fieldset>
 				<div>
-					<a  class="midBtn normalBtn" href="#">添加管理员</a>
+					<a  class="midBtn normalBtn" href="#"><i class="fa fa-plus-circle"></i> 添加管理员</a>
 				</div>
 				<table>
 					<tr>
@@ -80,8 +81,9 @@
 						<td>XX</td>
 						<td>普通管理员</td>
 						<td>
-							<a href="#" class="smallBtn changeBtn">重置密码</a>
-							<a href="#" class="smallBtn delBtn">删除</a>
+							<a href="#" class="smallBtn checkBtn"><i class="fa fa-eye"></i>查看</a>
+							<a href="新闻修改.html" class="smallBtn changeBtn"><i class="fa fa-edit"></i>修改</a>
+							<a href="#" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -89,8 +91,9 @@
 						<td>XX</td>
 						<td>普通管理员</td>
 						<td>
-							<a href="#" class="smallBtn changeBtn">重置密码</a>
-							<a href="#" class="smallBtn delBtn">删除</a>
+							<a href="#" class="smallBtn checkBtn"><i class="fa fa-eye"></i>查看</a>
+							<a href="新闻修改.html" class="smallBtn changeBtn"><i class="fa fa-edit"></i>修改</a>
+							<a href="#" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -98,8 +101,9 @@
 						<td>XX</td>
 						<td>普通管理员</td>
 						<td>
-							<a href="#" class="smallBtn changeBtn">重置密码</a>
-							<a href="#" class="smallBtn delBtn">删除</a>
+							<a href="#" class="smallBtn checkBtn"><i class="fa fa-eye"></i>查看</a>
+							<a href="新闻修改.html" class="smallBtn changeBtn"><i class="fa fa-edit"></i>修改</a>
+							<a href="#" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -107,8 +111,9 @@
 						<td>XX</td>
 						<td>普通管理员</td>
 						<td>
-							<a href="#" class="smallBtn changeBtn">重置密码</a>
-							<a href="#" class="smallBtn delBtn">删除</a>
+							<a href="#" class="smallBtn checkBtn"><i class="fa fa-eye"></i>查看</a>
+							<a href="新闻修改.html" class="smallBtn changeBtn"><i class="fa fa-edit"></i>修改</a>
+							<a href="#" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
 						</td>
 					</tr>
 				</table>
@@ -118,6 +123,7 @@
 					<li> 1/3 </li>
 					<li><a href="#">下一页</a></li>
 					<li><a href="#">尾页</a></li>
+					<li>（总数据量：20条）</li>
 				</ul>
 			</div>
 		</div>

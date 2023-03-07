@@ -46,6 +46,8 @@ li{list-style: none;}
 	border-radius: 8px;
 	border: none;
 	cursor: pointer;
+	float: right;
+	margin: 5px;
 }
 .smallBtn{
 	padding: 5px 10px;
@@ -117,7 +119,10 @@ select{
 	outline: none;
 }
 .cdRight{
+	position: relative;
+	bottom: 10px;
 	float: right;
+	margin: 7px;
 }
 .newsContent textarea{
 	resize: none;
@@ -125,7 +130,11 @@ select{
 	outline: none;
 	margin: 20px auto;
 }
-
+.danxuan{
+	width: 30px;
+	margin: 0 5px;
+	text-align: left;
+}
 /*------------------ 表格样式 ------------------*/
 .rightArea>table{
 	border-collapse: collapse;
@@ -166,7 +175,7 @@ select{
 /* .rightArea>table .opt-btn:hover{background-color: orange;} */
 /*----------------- 翻页控件 -----------------*/
 #page{
-	width: 400px;
+	width: 500px;
 	height: 40px;
 	margin: 10px auto;
 }
@@ -174,13 +183,19 @@ select{
 	display: inline-block;
 	width: 60px;
 	text-align: center;
-	border-radius: 5px;
-	background-color: var(--majorColor);
-	color: white;
+	/* border-radius: 5px;
+	background-color: var(--majorColor); */
+}
+#page>li:last-of-type{
+	width: 150px;
+	display: inline-block;
 }
 #page li>a{
 	text-decoration: none;
-	color: white;
+	color: black;
+}
+#page li>a:hover{
+	font-weight: bold;
 }
 
 /*============================ 后台登录页 =========================*/
@@ -258,7 +273,10 @@ select{
 #userImg{
 	height: 40px;
 	border-radius: 20px;
-	
+	vertical-align: middle;
+}
+#userImg:hover{
+	cursor: pointer;
 }
 .drop-menu>a{
 	line-height: 40px;
@@ -344,15 +362,18 @@ select{
 	height: 120px;
 	margin: 40px 20px;
 	display: inline-block;
-	background-color: lightsalmon;
+	background-color: #2B9D4A;
 	border-radius: 30px;
 	box-shadow: 1px 10px 20px #999;
+	transition-duration: 0.2s;
 }
 .rightArea .tjBox:hover{
-	width: 230px;
+	/* width: 230px;
 	height: 130px;
-	margin: 40px 15px;
+	margin: 40px 15px; */
+	cursor: pointer;
 	box-shadow: 10px 20px 40px #999;
+	transform: scale(1.1);
 }
 .rightArea .tjBox h3{
 	text-align: center;
