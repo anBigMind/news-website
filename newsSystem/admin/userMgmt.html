@@ -82,7 +82,7 @@
 						<td>
 							<a href="userCheck.html" class="smallBtn checkBtn"><i class="fa fa-eye"></i>查看</a>
 							<a href="userEdit.html" class="smallBtn changeBtn"><i class="fa fa-edit"></i>修改</a>
-							<a href="#" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
+							<a href="javascript:void(0);" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -93,7 +93,7 @@
 						<td>
 							<a href="userCheck.html" class="smallBtn checkBtn"><i class="fa fa-eye"></i>查看</a>
 							<a href="userEdit.html" class="smallBtn changeBtn"><i class="fa fa-edit"></i>修改</a>
-							<a href="#" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
+							<a href="javascript:void(0);" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -104,7 +104,7 @@
 						<td>
 							<a href="userCheck.html" class="smallBtn checkBtn"><i class="fa fa-eye"></i>查看</a>
 							<a href="userEdit.html" class="smallBtn changeBtn"><i class="fa fa-edit"></i>修改</a>
-							<a href="#" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
+							<a href="javascript:void(0);" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -115,7 +115,7 @@
 						<td>
 							<a href="userCheck.html" class="smallBtn checkBtn"><i class="fa fa-eye"></i>查看</a>
 							<a href="userEdit.html" class="smallBtn changeBtn"><i class="fa fa-edit"></i>修改</a>
-							<a href="#" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
+							<a href="javascript:void(0);" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -126,7 +126,7 @@
 						<td>
 							<a href="userCheck.html" class="smallBtn checkBtn"><i class="fa fa-eye"></i>查看</a>
 							<a href="userEdit.html" class="smallBtn changeBtn"><i class="fa fa-edit"></i>修改</a>
-							<a href="#" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
+							<a href="javascript:void(0);" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -137,7 +137,7 @@
 						<td>
 							<a href="userCheck.html" class="smallBtn checkBtn"><i class="fa fa-eye"></i>查看</a>
 							<a href="userEdit.html" class="smallBtn changeBtn"><i class="fa fa-edit"></i>修改</a>
-							<a href="#" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
+							<a href="javascript:void(0);" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -148,7 +148,7 @@
 						<td>
 							<a href="userCheck.html" class="smallBtn checkBtn"><i class="fa fa-eye"></i>查看</a>
 							<a href="userEdit.html" class="smallBtn changeBtn"><i class="fa fa-edit"></i>修改</a>
-							<a href="#" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
+							<a href="javascript:void(0);" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
 						</td>
 					</tr>
 					<tr>
@@ -159,7 +159,7 @@
 						<td>
 							<a href="userCheck.html" class="smallBtn checkBtn"><i class="fa fa-eye"></i>查看</a>
 							<a href="userEdit.html" class="smallBtn changeBtn"><i class="fa fa-edit"></i>修改</a>
-							<a href="#" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
+							<a href="javascript:void(0);" class="smallBtn delBtn"><i class="fa fa-trash-o"></i>删除</a>
 						</td>
 					</tr>
 				</table>
@@ -176,5 +176,16 @@
 		<footer id="bottomArea">
 			版权所有&copy;翻版必究 网络备案号:xxxxxxxx
 		</footer>
+		<script src="../js/jquery-3.6.0.js"></script>
+		<script src="../layer/layer.js"></script>
+		<script>
+			// 删除询问
+			$('.delBtn').click(function(){
+				layer.confirm('要删除吗',{title:'删除提示',icon:3},function(index){
+					layer.msg('删除成功',{icon:1,time:1000});
+					layer.close(index);
+				})
+			})
+		</script>
 	</body>
 </html>
