@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>新闻管理</title>
+		<link rel="stylesheet" href="../layui-v2.6.8/layui/css/layui.css">
+		<style>
+			.layui-form-item{
+				display: inline-block;
+			}
+			.label{
+				width: 160px;
+			}
+			.btn{
+				display: inline-block;
+				position: relative;
+				bottom: 30px;
+			}
+			#page{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 总容器 -->
+		<div class="layui-layout-admin">
+			<!-- 头部 -->
+			<div class="layui-header">
+				<!-- LOGO区 -->
+				<div>
+					<a href="adminIndex.html" class="layui-logo"><img style="height: 50px;" src="../img/logo.png" alt=""></a>
+				</div>
+				<!-- 用户信息 -->
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="#"><img src="../img/小猫.png" class="layui-nav-img">admin</a>
+						<!-- 下拉菜单 -->
+						<dl class="layui-nav-child">
+							<dd><a href="#">个人中心</a></dd>
+							<dd><a href="#">退出</a></dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<!-- 左侧边栏 -->
+			<div class="layui-side layui-bg-cyan">
+				<div class="layui-side-scroll">
+					<ul class="layui-nav layui-nav-tree">
+						<li class="layui-nav-item"><a href="adminIndex.html"><i class="layui-icon layui-icon-home"></i>首页</a></li>
+						<li class="layui-nav-item"><a href="newsTypeMgmt.html"><i class="layui-icon layui-icon-templeate-1"></i>新闻分类管理</a></li>
+						<li class="layui-nav-item layui-this"><a href="#"><i class="layui-icon layui-icon-file"></i>新闻管理</a></li>
+						<li class="layui-nav-item"><a href="#"><i class="layui-icon layui-icon-group"></i>用户管理</a></li>
+						<li class="layui-nav-item"><a href="#"><i class="layui-icon layui-icon-user"></i>管理员管理</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 主体内容 -->
+			<div class="layui-body">
+				<div style="padding: 15px 30px 50px;">
+					<div class="layui-card">
+						<div class="layui-card-header">
+							<span class="layui-breadcrumb">
+								<a href="adminIndex.html">首页</a>
+								<a><cite>新闻管理</cite></a>
+							</span>
+						</div>
+						<div class="layui-card-body">
+							<fieldset class="layui-elem-field">
+								<legend>条件查询</legend>
+								<div class="layui-field-box">
+									<div class="layui-form-item">
+										<div class="layui-form-label label">新闻分类名称（模糊）：</div>
+										<div class="layui-input-inline">
+											<input class="layui-input" type="text" placeholder="请输入新闻分类名称模糊字"/>
+										</div>
+									</div>
+									<div class="layui-btn btn layui-btn-normal"><i class="layui-icon layui-icon-search"></i>搜索</div>
+								</div>
+							</fieldset>
+							<table class="layui-table">
+								<colgroup>
+									<col width="200px">
+									<col width="350px">
+									<col width="200px">
+									<col width='200px'>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>新闻分类</th>
+										<th>新闻标题</th>
+										<th>作者</th>
+										<th>发布时间</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>xx</td>
+										<td>xx</td>
+										<td>张三</td>
+										<td>2023-2-3</td>
+										<td>
+											<a href="#" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
+											<a href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
+										</td>
+									</tr>
+									<tr>
+										<td>xx</td>
+										<td>xx</td>
+										<td>张三</td>
+										<td>2023-2-3</td>
+										<td>
+											<a href="#" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
+											<a href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
+										</td>
+									</tr>
+									<tr>
+										<td>xx</td>
+										<td>xx</td>
+										<td>张三</td>
+										<td>2023-2-3</td>
+										<td>
+											<a href="#" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
+											<a href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
+										</td>
+									</tr>
+									<tr>
+										<td>xx</td>
+										<td>xx</td>
+										<td>张三</td>
+										<td>2023-2-3</td>
+										<td>
+											<a href="#" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
+											<a href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
+										</td>
+									</tr>
+									<tr>
+										<td>xx</td>
+										<td>xx</td>
+										<td>张三</td>
+										<td>2023-2-3</td>
+										<td>
+											<a href="#" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
+											<a href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
+										</td>
+									</tr>
+									<tr>
+										<td>xx</td>
+										<td>xx</td>
+										<td>张三</td>
+										<td>2023-2-3</td>
+										<td>
+											<a href="#" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
+											<a href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div id="page"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部 -->
+			<div class="layui-footer">
+				<div style="text-align: center;">版权所有&copy;翻版必究！ICP网络备案：陕93287465</div>
+			</div>
+		</div>
+		<script src="../layui-v2.6.8/layui/layui.js"></script>
+		<script>
+			layui.use(['element','form','table','laypage'],function(){
+				var element = layui.element;
+				var form = layui.form;
+				var table = layui.table;
+				var laypage = layui.laypage;
+				laypage.render({
+					elem:'page',
+					count:20,
+					limit:7,
+				})
+			})
+		</script>
+	</body>
+</html>
