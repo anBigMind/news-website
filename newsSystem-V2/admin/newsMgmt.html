@@ -11,13 +11,11 @@
 			.label{
 				width: 160px;
 			}
-			.btn{
-				display: inline-block;
-				position: relative;
-				bottom: 30px;
-			}
 			#page{
 				text-align: center;
+			}
+			.addBtn{
+				float: right;
 			}
 		</style>
 	</head>
@@ -28,7 +26,7 @@
 			<div class="layui-header">
 				<!-- LOGO区 -->
 				<div>
-					<a href="adminIndex.html" class="layui-logo"><img style="height: 50px;" src="../img/logo.png" alt=""></a>
+					<a href="adminIndex.html" class="layui-logo"><img style="height: 60px;" src="../img/The_Economist_logo.png" alt=""></a>
 				</div>
 				<!-- 用户信息 -->
 				<ul class="layui-nav layui-layout-right">
@@ -49,8 +47,8 @@
 						<li class="layui-nav-item"><a href="adminIndex.html"><i class="layui-icon layui-icon-home"></i>首页</a></li>
 						<li class="layui-nav-item"><a href="newsTypeMgmt.html"><i class="layui-icon layui-icon-templeate-1"></i>新闻分类管理</a></li>
 						<li class="layui-nav-item layui-this"><a href="#"><i class="layui-icon layui-icon-file"></i>新闻管理</a></li>
-						<li class="layui-nav-item"><a href="#"><i class="layui-icon layui-icon-group"></i>用户管理</a></li>
-						<li class="layui-nav-item"><a href="#"><i class="layui-icon layui-icon-user"></i>管理员管理</a></li>
+						<li class="layui-nav-item"><a href="userMgmt.html"><i class="layui-icon layui-icon-group"></i>用户管理</a></li>
+						<li class="layui-nav-item"><a href="adminMgmt.html"><i class="layui-icon layui-icon-user"></i>管理员管理</a></li>
 					</ul>
 				</div>
 			</div>
@@ -68,16 +66,49 @@
 							<fieldset class="layui-elem-field">
 								<legend>条件查询</legend>
 								<div class="layui-field-box">
-									<div class="layui-form-item">
-										<div class="layui-form-label label">新闻分类名称（模糊）：</div>
-										<div class="layui-input-inline">
-											<input class="layui-input" type="text" placeholder="请输入新闻分类名称模糊字"/>
+									<form action="#" class="layui-form">
+										<div class="layui-form-item">
+											<div class="layui-form-label label">新闻标题（模糊）：</div>
+											<div class="layui-input-inline">
+												<input class="layui-input" type="text" placeholder="请输入新闻标题模糊字"/>
+											</div>
 										</div>
-									</div>
-									<div class="layui-btn btn layui-btn-normal"><i class="layui-icon layui-icon-search"></i>搜索</div>
+										<div class="layui-form-item">
+											<div class="layui-form-label label">作者（模糊）：</div>
+											<div class="layui-input-inline">
+												<input class="layui-input" type="text" placeholder="请输入作者名称模糊字"/>
+											</div>
+										</div>
+										<div class="layui-form-item">
+											<label class="layui-form-label">新闻分类：</label>
+											<div class="layui-input-inline">
+												<select name="">
+													<option value="0">请选择</option>
+													<option value="1">xx</option>
+													<option value="2">xx</option>
+													<option value="3">xx</option>
+													<option value="4">xx</option>
+												</select>
+											</div>
+										</div>
+										<div class="layui-form-item">
+											<div class="layui-inline">
+												<label class="layui-form-label">发布日期：</label>
+												<div class="layui-input-inline">
+													<input id="date1" class="layui-input" type="date">
+												</div>
+												<div class="layui-form-mid">到</div>
+												<div class="layui-input-inline">
+													<input id="date2" class="layui-input" type="date">
+												</div>
+											</div>
+										</div>
+										<div class="layui-btn btn layui-btn-normal"><i class="layui-icon layui-icon-search"></i>搜索</div>
+									</form>
 								</div>
 							</fieldset>
-							<table class="layui-table">
+							<a href="newsAdd.html" class="layui-btn layui-btn-normal addBtn"><i class="layui-icon layui-icon-add-1"></i>添加新闻</a>
+							<table class="layui-table" lay-even>
 								<colgroup>
 									<col width="200px">
 									<col width="350px">
@@ -100,8 +131,9 @@
 										<td>张三</td>
 										<td>2023-2-3</td>
 										<td>
-											<a href="#" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
-											<a href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
+											<a href="#" class="layui-btn layui-btn-warm layui-btn-sm"><i class="layui-icon layui-icon-tabs"></i>查看</a>
+											<a href="newsEdit.html" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
+											<a onclick="del()" href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
 										</td>
 									</tr>
 									<tr>
@@ -110,8 +142,9 @@
 										<td>张三</td>
 										<td>2023-2-3</td>
 										<td>
-											<a href="#" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
-											<a href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
+											<a href="#" class="layui-btn layui-btn-warm layui-btn-sm"><i class="layui-icon layui-icon-tabs"></i>查看</a>
+											<a href="newsEdit.html" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
+											<a onclick="del()" href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
 										</td>
 									</tr>
 									<tr>
@@ -120,8 +153,9 @@
 										<td>张三</td>
 										<td>2023-2-3</td>
 										<td>
-											<a href="#" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
-											<a href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
+											<a href="#" class="layui-btn layui-btn-warm layui-btn-sm"><i class="layui-icon layui-icon-tabs"></i>查看</a>
+											<a href="newsEdit.html" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
+											<a onclick="del()" href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
 										</td>
 									</tr>
 									<tr>
@@ -130,8 +164,9 @@
 										<td>张三</td>
 										<td>2023-2-3</td>
 										<td>
-											<a href="#" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
-											<a href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
+											<a href="#" class="layui-btn layui-btn-warm layui-btn-sm"><i class="layui-icon layui-icon-tabs"></i>查看</a>
+											<a href="newsEdit.html" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
+											<a onclick="del()" href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
 										</td>
 									</tr>
 									<tr>
@@ -140,8 +175,9 @@
 										<td>张三</td>
 										<td>2023-2-3</td>
 										<td>
-											<a href="#" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
-											<a href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
+											<a href="#" class="layui-btn layui-btn-warm layui-btn-sm"><i class="layui-icon layui-icon-tabs"></i>查看</a>
+											<a href="newsEdit.html" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
+											<a onclick="del()" href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
 										</td>
 									</tr>
 									<tr>
@@ -150,8 +186,9 @@
 										<td>张三</td>
 										<td>2023-2-3</td>
 										<td>
-											<a href="#" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
-											<a href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
+											<a href="#" class="layui-btn layui-btn-warm layui-btn-sm"><i class="layui-icon layui-icon-tabs"></i>查看</a>
+											<a href="newsEdit.html" class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</a>
+											<a onclick="del()" href="javascript:void(0);" class="layui-btn layui-btn-sm layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</a>
 										</td>
 									</tr>
 								</tbody>
@@ -168,10 +205,24 @@
 		</div>
 		<script src="../layui-v2.6.8/layui/layui.js"></script>
 		<script>
-			layui.use(['element','form','table','laypage'],function(){
+			// 删除询问
+			function del(){
+				layer.confirm('要删除吗',{title:'删除提示',icon:3},function(index){
+					layer.msg('删除成功',{icon:1,time:1000});
+					layer.close(index);
+				})
+			}
+			layui.use(['element','form','table','laypage','laydate'],function(){
 				var element = layui.element;
 				var form = layui.form;
 				var table = layui.table;
+				var laydate = layui.laydate;
+				laydate.render({
+					elem:'#date1',
+				})
+				laydate.render({
+					elem:'#date2'
+				})
 				var laypage = layui.laypage;
 				laypage.render({
 					elem:'page',

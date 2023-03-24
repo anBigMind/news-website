@@ -1,7 +1,0 @@
-.tjbox{
-	transition: 0.2s;
-}
-.tjbox:hover{
-	cursor: pointer;
-	transform: translate(0px,-5px);
-}
